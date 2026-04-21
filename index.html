@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sozo — Artist-First Marketplace</title>
+  </head>
+  <body>
+    <div id="file-protocol-warning" style="display: none; padding: 40px; text-align: center; font-family: sans-serif;">
+      <h1 style="color: red;">⚠️ Website Cannot Be Opened This Way</h1>
+      <p style="font-size: 18px; line-height: 1.6;">
+        Because this is a modern React application, it <strong>cannot</strong> be opened by double-clicking the <code>index.html</code> file. <br/>
+        You must view it through the local development server.
+      </p>
+      <div style="margin-top: 30px; padding: 20px; background: #f3f4f6; border-radius: 8px; display: inline-block;">
+        <h2 style="margin-top: 0;">✅ How to view the website:</h2>
+        <p style="font-size: 20px;">Click this link: <a href="http://localhost:5173/" style="color: #2563eb; font-weight: bold;">http://localhost:5173/</a></p>
+      </div>
+    </div>
+    
+    <div id="root"></div>
+    <script>
+      if (window.location.protocol === 'file:') {
+        document.getElementById('file-protocol-warning').style.display = 'block';
+        document.getElementById('root').style.display = 'none';
+      }
+    </script>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
